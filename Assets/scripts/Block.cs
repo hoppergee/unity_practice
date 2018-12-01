@@ -1,0 +1,43 @@
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class Block : MonoBehaviour {
+
+  [SerializeField] AudioClip breakSound;
+  [SerializeField] GameObject blockSparklesVFX;
+  //[SerializeField] int maxHits;
+
+  // cached reference
+  Level level;
+
+  // state variables
+  //[SerializeField] int timesHit; // TODO only serialize for debug purpose.
+
+  private void Start() {
+    level = FindObjectOfType<Level>();
+    level.CountBreakableBlocks();
+  }
+
+  private void OnCollisionEnter2D(Collision2D collision) {
+    DestroyBlock();
+  }
+
+  private void DestroyBlock() {
+    PlayBlockDestroySFX();
+    level.BlockDestroyed();
+    FindObjectOfType<GameSession>().AddToScore();
+    Destroy(gameObject);
+    TriggerSparklesVFX();
+  }
+
+  private void PlayBlockDestroySFX() {
+    AudioSource.PlayClipAtPoint(breakSound, Camera.main.transform.position);
+  }
+
+  private void TriggerSparklesVFX() {
+    GameObject sparkles = Instantiate(blockSparklesVFX, transform.position, transform.rotation);
+    Destroy(sparkles, 2);
+  }
+
+}
