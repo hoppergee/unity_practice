@@ -15,12 +15,20 @@ public class Block : MonoBehaviour {
   //[SerializeField] int timesHit; // TODO only serialize for debug purpose.
 
   private void Start() {
+    CountBreakableBlocks();
+  }
+
+  private void CountBreakableBlocks() {
     level = FindObjectOfType<Level>();
-    level.CountBreakableBlocks();
+    if (tag == "Breakable") {
+      level.CountBlocks();
+    }
   }
 
   private void OnCollisionEnter2D(Collision2D collision) {
-    DestroyBlock();
+    if (tag == "Breakable") {
+      DestroyBlock();
+    }
   }
 
   private void DestroyBlock() {
