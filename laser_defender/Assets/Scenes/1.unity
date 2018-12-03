@@ -364,7 +364,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4140468914851786, guid: dc9262018a960443eb4a1e8138a86c70, type: 2}
       propertyPath: m_LocalPosition.z
-      value: 0.119140625
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4140468914851786, guid: dc9262018a960443eb4a1e8138a86c70, type: 2}
       propertyPath: m_LocalRotation.x
@@ -386,6 +386,21 @@ Prefab:
       propertyPath: m_RootOrder
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 1871049439120270, guid: dc9262018a960443eb4a1e8138a86c70, type: 2}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: 3443629218296621865, guid: 0000000000000000d000000000000000,
+        type: 0}
+    - target: {fileID: 1309752069188036, guid: dc9262018a960443eb4a1e8138a86c70, type: 2}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: 3443629218296621865, guid: 0000000000000000d000000000000000,
+        type: 0}
+    - target: {fileID: 1941533489715642, guid: dc9262018a960443eb4a1e8138a86c70, type: 2}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: 3443629218296621865, guid: 0000000000000000d000000000000000,
+        type: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dc9262018a960443eb4a1e8138a86c70, type: 2}
   m_IsPrefabAsset: 0
@@ -691,7 +706,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1763824579}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.049999997, y: -0.8299999, z: -0.15208104}
+  m_LocalPosition: {x: 4.2, y: 5.65, z: -0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -705,10 +720,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1763824579}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa032012955a34588874d5cbfa8311fc, type: 3}
+  m_Script: {fileID: 11500000, guid: 5e228cb2eae9345a6ae3cf3044601714, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   waypoints:
   - {fileID: 4555716999021930, guid: dc9262018a960443eb4a1e8138a86c70, type: 2}
   - {fileID: 4831224453144836, guid: dc9262018a960443eb4a1e8138a86c70, type: 2}
   - {fileID: 4488973487246826, guid: dc9262018a960443eb4a1e8138a86c70, type: 2}
+  moveSpeed: 2
